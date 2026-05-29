@@ -1,0 +1,1305 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>刘景婕 — UX/UI Designer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --blue-50: #eff6ff;
+            --blue-100: #dbeafe;
+            --blue-200: #bfdbfe;
+            --blue-300: #93c5fd;
+            --blue-400: #60a5fa;
+            --blue-500: #3b82f6;
+            --blue-600: #2563eb;
+            --blue-700: #1d4ed8;
+
+            --bg: #f8fafc;
+            --surface: #ffffff;
+            --surface-warm: #f1f5f9;
+            --ink: #0f172a;
+            --ink-secondary: #1e293b;
+            --ink-muted: #475569;
+            --ink-subtle: #94a3b8;
+            --border: #e2e8f0;
+            --border-light: #f1f5f9;
+
+            --blue-50: #eff6ff;
+            --blue-100: #dbeafe;
+            --blue-200: #bfdbfe;
+            --blue-300: #93c5fd;
+            --blue-400: #60a5fa;
+            --blue-500: #3b82f6;
+            --blue-600: #2563eb;
+            --blue-700: #1d4ed8;
+            --blue-800: #1e40af;
+            --blue-900: #1e3a8a;
+
+            --indigo-50: #eef2ff;
+            --indigo-100: #e0e7ff;
+
+            --shadow-sm: 0 1px 3px rgba(37, 99, 235, 0.04);
+            --shadow-md: 0 2px 8px rgba(37, 99, 235, 0.05);
+            --shadow-lg: 0 4px 12px rgba(37, 99, 235, 0.06);
+
+            --radius-sm: 8px;
+            --radius-md: 14px;
+            --radius-lg: 16px;
+            --radius-xl: 28px;
+
+            --space-xs: 8px;
+            --space-sm: 16px;
+            --space-md: 24px;
+            --space-lg: 40px;
+            --space-xl: 64px;
+            --space-2xl: 96px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--ink);
+            line-height: 1.75;
+            letter-spacing: 0.01em;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3 { text-wrap: balance; }
+
+        /* Typography */
+        .font-display { font-family: 'Outfit', 'Noto Sans SC', sans-serif; }
+        .font-serif { font-family: 'Noto Serif SC', 'Outfit', serif; }
+
+        .text-hero {
+            font-family: 'Outfit', 'Noto Sans SC', sans-serif;
+            font-size: clamp(40px, 6vw, 72px);
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            color: var(--ink);
+        }
+
+        .hero-title.font-serif {
+            font-family: 'Noto Serif SC', 'Outfit', serif;
+            font-weight: 600;
+            line-height: 1.15;
+            letter-spacing: 0.02em;
+        }
+
+        .text-display {
+            font-family: 'Outfit', 'Noto Sans SC', sans-serif;
+            font-size: clamp(28px, 3.5vw, 42px);
+            font-weight: 600;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+
+        .text-title {
+            font-size: clamp(18px, 2vw, 22px);
+            font-weight: 600;
+            line-height: 1.4;
+            color: var(--ink);
+        }
+
+        .text-lead {
+            font-size: clamp(15px, 1.6vw, 17px);
+            font-weight: 400;
+            line-height: 1.8;
+            color: var(--ink);
+        }
+
+        .text-body {
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 1.85;
+            color: var(--ink-secondary);
+        }
+
+        .text-small {
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 1.6;
+            color: var(--ink-muted);
+        }
+
+        .text-caption {
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            color: var(--blue-600);
+        }
+
+        /* Layout */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+
+        .container-wide {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+
+        /* Spacing */
+        .mt-xs { margin-top: var(--space-xs); }
+        .mt-sm { margin-top: var(--space-sm); }
+        .mt-md { margin-top: var(--space-md); }
+        .mt-lg { margin-top: var(--space-lg); }
+        .mt-xl { margin-top: 80px; }
+        .mt-2xl { margin-top: var(--space-2xl); }
+
+        .mb-xs { margin-bottom: var(--space-xs); }
+        .mb-sm { margin-bottom: var(--space-sm); }
+        .mb-md { margin-bottom: var(--space-md); }
+        .mb-lg { margin-bottom: var(--space-lg); }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(247, 250, 249, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border-light);
+            transition: all 0.3s ease;
+        }
+
+        .nav-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 60px;
+        }
+
+        .nav-name {
+            font-family: 'Dancing Script', cursive;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--blue-600);
+            letter-spacing: 0.02em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: var(--space-md);
+            align-items: center;
+        }
+
+        .nav-link {
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--ink-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .nav-link:hover {
+            color: var(--blue-600);
+        }
+
+        .nav-link.active {
+            color: var(--blue-600);
+        }
+
+        /* Hero */
+        .hero {
+            min-height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            position: relative;
+            padding: 120px var(--space-md) 80px;
+            overflow: hidden;
+        }
+
+        .hero-inner {
+            display: flex;
+            align-items: center;
+            gap: clamp(48px, 8vw, 120px);
+            max-width: 1000px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .hero-visual {
+            flex: 0 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-image-wrap {
+            width: clamp(280px, 30vw, 400px);
+            height: clamp(320px, 36vw, 460px);
+        }
+
+        .hero-image-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .hero-content {
+            flex: 1 1 auto;
+            min-width: 0;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(37, 99, 235, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -20%;
+            left: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(37, 99, 235, 0.05) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 14px;
+            background: var(--blue-50);
+            border: 1px solid var(--blue-100);
+            border-radius: 100px;
+            margin-bottom: var(--space-md);
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge-dot {
+            width: 6px;
+            height: 6px;
+            background: var(--blue-500);
+            border-radius: 50%;
+            animation: pulse 2.5s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.3); }
+        }
+
+        .hero-title {
+            position: relative;
+            z-index: 1;
+            margin-top: 10px;
+            color: var(--ink-secondary);
+        }
+
+        .hero-title .accent {
+            color: var(--blue-600);
+        }
+
+        .hero-role {
+            font-family: 'Outfit', sans-serif;
+            font-size: clamp(13px, 1.4vw, 15px);
+            font-weight: 500;
+            color: rgba(15, 23, 42, 0.5);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-top: var(--space-md);
+        }
+
+        .hero-intro {
+            max-width: 480px;
+            margin-top: var(--space-md);
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-contact {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-md);
+            margin-top: var(--space-lg);
+            max-width: 480px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-contact-item:last-child {
+            margin-left: auto;
+            margin-right: 20px;
+        }
+
+        .hero-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: var(--ink-muted);
+        }
+
+        .hero-contact-icon {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            color: var(--blue-600);
+            flex-shrink: 0;
+        }
+
+        /* Section */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-alt {
+            background: linear-gradient(180deg, #f0f7ff 0%, var(--surface) 25%, var(--surface) 75%, #f5f9ff 100%);
+        }
+
+        .section-warm {
+            background: linear-gradient(180deg, var(--blue-50) 0%, var(--bg) 100%);
+        }
+
+
+
+        .section-header {
+            margin-bottom: 48px;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--surface);
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-light);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+
+        .card-highlight {
+            background: linear-gradient(135deg, var(--surface) 0%, var(--blue-50) 100%);
+            border: 1px solid var(--blue-100);
+        }
+
+        /* Timeline / Experience */
+        .timeline {
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 8px;
+            bottom: 8px;
+            width: 2px;
+            background: var(--border);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 36px;
+            padding-bottom: var(--space-xl);
+        }
+
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 0;
+            top: 6px;
+            width: 16px;
+            height: 16px;
+            background: var(--surface);
+            border: 3px solid var(--blue-400);
+            border-radius: 50%;
+        }
+
+        .timeline-header {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: var(--space-xs) var(--space-sm);
+        }
+
+        .timeline-title {
+            font-size: 17px;
+            font-weight: 600;
+            color: var(--ink);
+        }
+
+        .timeline-company {
+            font-size: 14px;
+            color: var(--ink-secondary);
+        }
+
+        .timeline-date {
+            font-size: 13px;
+            color: var(--ink-subtle);
+            font-weight: 400;
+            margin-left: auto;
+        }
+
+        .timeline-role {
+            display: inline-block;
+            padding: 2px 10px;
+            background: var(--blue-50);
+            border: 1px solid var(--blue-100);
+            border-radius: 100px;
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--blue-700);
+            margin-left: auto;
+        }
+
+        .timeline-desc {
+            margin-top: var(--space-sm);
+            color: var(--ink-secondary);
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        /* Experience bar */
+        .exp-bar {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: var(--space-xs) var(--space-sm);
+            padding: var(--space-md) var(--space-lg);
+            background: var(--surface);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-light);
+        }
+
+        .exp-role {
+            font-family: 'Outfit', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--ink);
+        }
+
+        .exp-company {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--ink-secondary);
+        }
+
+        .exp-title {
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--ink-muted);
+            padding: 3px 10px;
+            background: var(--blue-50);
+            border-radius: 100px;
+        }
+
+        .exp-date {
+            font-size: 13px;
+            color: var(--ink-subtle);
+            margin-left: auto;
+        }
+
+        .exp-divider {
+            width: 4px;
+            height: 4px;
+            background: var(--ink-subtle);
+            border-radius: 50%;
+            opacity: 0.4;
+        }
+
+        /* Project Cards */
+        .project-grid {
+            display: grid;
+            gap: var(--space-md);
+        }
+
+        .project-card {
+            background: var(--surface);
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg);
+            border: 1px solid var(--border-light);
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            box-shadow: var(--shadow-md);
+            border-color: var(--blue-200);
+        }
+
+        .project-header {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            gap: var(--space-xs) var(--space-sm);
+            margin-bottom: var(--space-sm);
+        }
+
+        .project-name {
+            font-size: 17px;
+            font-weight: 600;
+            color: var(--ink);
+        }
+
+        .project-client {
+            font-size: 13px;
+            color: var(--blue-600);
+            font-weight: 500;
+        }
+
+        .project-desc {
+            color: var(--ink-secondary);
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .project-result {
+            margin-top: var(--space-xs);
+            padding: 10px 16px;
+            background: var(--blue-50);
+            border-radius: 6px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .project-result-label {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--blue-700);
+            margin-bottom: 4px;
+        }
+
+        .project-result-text {
+            font-size: 13px;
+            color: var(--ink-secondary);
+            line-height: 1.6;
+        }
+
+        /* Contact */
+        .contact-image {
+            width: 200px;
+            margin: 0 auto;
+        }
+
+        .contact-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: var(--space-md);
+            margin-top: var(--space-lg);
+        }
+
+        .contact-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--ink-secondary);
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .contact-link:hover {
+            border-color: var(--blue-300);
+            color: var(--blue-600);
+            background: var(--blue-50);
+        }
+
+        /* Skills */
+        .skill-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: var(--space-sm);
+        }
+
+        .skill-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 16px;
+            background: var(--surface);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--ink-secondary);
+            transition: all 0.2s;
+        }
+
+        .skill-item:hover {
+            border-color: var(--blue-200);
+            background: var(--blue-50);
+            color: var(--blue-700);
+        }
+
+        .skill-icon {
+            width: 8px;
+            height: 8px;
+            background: var(--blue-400);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        /* Tools */
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--space-md);
+        }
+
+        .tool-cell {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .tool-logo {
+            width: 100%;
+            aspect-ratio: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            background: rgba(255, 255, 255, 0.55);
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            border-radius: 8px;
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            transition: all 0.3s ease;
+            cursor: default;
+        }
+
+        .tool-logo:hover {
+            background: rgba(255, 255, 255, 0.9);
+            border-color: rgba(37, 99, 235, 0.25);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 28px rgba(37, 99, 235, 0.12);
+        }
+
+        .tool-logo img {
+            width: 48%;
+            height: auto;
+            display: block;
+        }
+
+
+
+        .tool-name {
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--ink-muted);
+            flex-shrink: 0;
+            line-height: 1.2;
+            transition: color 0.3s ease;
+        }
+
+        .tool-logo:hover .tool-name {
+            color: var(--blue-600);
+        }
+
+        /* Clients */
+        .client-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: var(--space-sm);
+        }
+
+        .client-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 18px;
+            background: var(--surface);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            transition: all 0.2s;
+        }
+
+        .client-item:hover {
+            border-color: var(--blue-200);
+            background: var(--blue-50);
+        }
+
+        .client-icon {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--blue-100);
+            border-radius: var(--radius-sm);
+            color: var(--blue-700);
+            font-size: 13px;
+            font-weight: 700;
+            font-family: 'Outfit', sans-serif;
+            flex-shrink: 0;
+        }
+
+        .client-name {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--ink-secondary);
+        }
+
+        /* Education */
+        .edu-card {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-md);
+            padding: var(--space-lg);
+            background: var(--surface);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-light);
+        }
+
+        .edu-icon {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--blue-50);
+            border: 1px solid var(--blue-100);
+            border-radius: var(--radius-md);
+            color: var(--blue-600);
+            flex-shrink: 0;
+        }
+
+        .edu-school {
+            font-size: 17px;
+            font-weight: 600;
+            color: var(--ink);
+        }
+
+        .edu-degree {
+            font-size: 14px;
+            color: var(--ink-secondary);
+            margin-top: 4px;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 16px var(--space-md);
+            border-top: 1px solid var(--border-light);
+            margin-top: 80px;
+        }
+
+        .footer-text {
+            font-size: 12px;
+            color: var(--ink-subtle);
+        }
+
+        /* Reveal animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .reveal {
+                opacity: 1;
+                transform: none;
+                transition: none;
+            }
+            html {
+                scroll-behavior: auto;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-inner {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: var(--space-lg);
+            }
+
+            .hero-visual {
+                order: -1;
+            }
+
+            .hero-image-wrap {
+                width: 220px;
+                height: 220px;
+            }
+
+            .exp-bar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: var(--space-xs);
+            }
+
+            .exp-date {
+                margin-left: 0;
+            }
+
+            .exp-divider {
+                display: none;
+            }
+
+            .tools-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: var(--space-sm);
+            }
+
+            .tool-logo {
+                gap: 16px;
+            }
+
+            .tool-logo img {
+                width: 44%;
+            }
+
+            .hero-content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero-contact {
+                flex-direction: column;
+                gap: var(--space-sm);
+                align-items: center;
+            }
+
+            .timeline-date {
+                margin-left: 0;
+                width: 100%;
+            }
+
+            .project-header {
+                flex-direction: column;
+                gap: 4px;
+            }
+
+            .client-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .edu-card {
+                flex-direction: column;
+                gap: var(--space-sm);
+            }
+        }
+
+        ::selection {
+            background: rgba(37, 99, 235, 0.2);
+            color: var(--ink);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <span class="nav-name">Liu Kino Jingjie</span>
+            <div class="nav-links">
+                <a href="#about" class="nav-link">关于我</a>
+                <a href="#experience" class="nav-link">工作经历</a>
+                <a href="#contact" class="nav-link">联系我</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero" id="about">
+        <div class="container hero-inner">
+            <div class="hero-visual">
+                <div class="hero-image-wrap">
+                    <img src="Banner.png" alt="Liu Kino Jingjie">
+                </div>
+            </div>
+            <div class="hero-content">
+                <p class="hero-role">UI/UX Designer</p>
+                <h1 class="text-hero hero-title font-serif">
+                    刘景婕
+                </h1>
+                <div class="hero-intro">
+                    <p class="text-lead">
+                        资深UI/UX设计师，7年全链路产品设计经验，横跨ToB企业级系统与ToC消费级应用，擅长从复杂业务需求中提炼清晰的用户体验路径。
+                    </p>
+                </div>
+                <div class="hero-contact">
+                    <div class="hero-contact-item">
+                        <div class="hero-contact-icon">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                        </div>
+                        <span>liujingjie1997@163.com</span>
+                    </div>
+                    <div class="hero-contact-item">
+                        <div class="hero-contact-icon">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        </div>
+                        <span>13012325505</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About -->
+    <section class="section" style="background: #ffffff;">
+        <div class="container reveal">
+            <div class="section-header">
+                <span class="text-caption">About</span>
+                <h2 class="text-display mt-sm">个人概述与专业能力</h2>
+            </div>
+            <p class="text-body">
+                资深UI/UX设计师，7年全链路产品设计经验，横跨ToB企业级系统（如SaaS平台、数据后台）ToC消费级应用（如移动App、生活服务产品），擅长从复杂业务需求中提炼清晰的用户体验路径。
+            </p>
+            <p class="text-body mt-xs">
+                主导多个0到1及体验重构项目，熟练运用用户研究、信息架构、交互原型与高保真视觉设计，推动设计系统落地，提升团队协作效率30%+，关键任务转化率提升15%-25%。
+            </p>
+            <p class="text-body mt-xs">
+                精通Figma、Sketch、Office套件、AI联动等主流工具，熟悉敏捷开发流程，具备优秀的跨职能沟通能力，能高效协同产品、研发与业务团队，确保设计方案高质量交付与业务目标对齐。
+            </p>
+            <div class="skill-grid mt-lg">
+                <div class="skill-item">
+                    <div class="skill-icon"></div>
+                    <span>数据分析</span>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon"></div>
+                    <span>交互设计</span>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon"></div>
+                    <span>UI设计</span>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon"></div>
+                    <span>平面设计</span>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon"></div>
+                    <span>AI支持设计</span>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon"></div>
+                    <span>用户研究</span>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon"></div>
+                    <span>信息架构</span>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon"></div>
+                    <span>设计系统</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools -->
+    <section class="section" style="background: #f8fafc;">
+        <div class="container reveal">
+            <div class="section-header">
+                <span class="text-caption">Tools</span>
+                <h2 class="text-display mt-sm">工具能力</h2>
+            </div>
+            <div class="tools-grid">
+                <div class="tool-cell">
+                    <div class="tool-logo">
+                        <img src="Figma.png" alt="Figma">
+                        <span class="tool-name">Figma</span>
+                    </div>
+                </div>
+                <div class="tool-cell">
+                    <div class="tool-logo">
+                        <img src="Sketch.png" alt="Sketch">
+                        <span class="tool-name">Sketch</span>
+                    </div>
+                </div>
+                <div class="tool-cell">
+                    <div class="tool-logo">
+                        <img src="Mastergo.png" alt="Mastergo">
+                        <span class="tool-name">Mastergo</span>
+                    </div>
+                </div>
+                <div class="tool-cell">
+                    <div class="tool-logo">
+                        <img src="PS.png" alt="Photoshop">
+                        <span class="tool-name">Photoshop</span>
+                    </div>
+                </div>
+                <div class="tool-cell">
+                    <div class="tool-logo">
+                        <img src="AE.png" alt="After Effects">
+                        <span class="tool-name">After Effects</span>
+                    </div>
+                </div>
+                <div class="tool-cell">
+                    <div class="tool-logo">
+                        <img src="ID.png" alt="InDesign">
+                        <span class="tool-name">InDesign</span>
+                    </div>
+                </div>
+                <div class="tool-cell">
+                    <div class="tool-logo">
+                        <img src="PPT.png" alt="PowerPoint">
+                        <span class="tool-name">PowerPoint</span>
+                    </div>
+                </div>
+                <div class="tool-cell">
+                    <div class="tool-logo">
+                        <img src="KIMI.png" alt="Kimi">
+                        <span class="tool-name">Kimi</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section section-warm" id="experience">
+        <div class="container reveal">
+            <div class="section-header">
+                <span class="text-caption">Experience</span>
+                <h2 class="text-display mt-sm">工作经历</h2>
+            </div>
+            <div class="exp-bar">
+                <span class="exp-role">UI/UX Designer</span>
+                <span class="exp-divider"></span>
+                <span class="exp-company">德勤华庆商务有限公司</span>
+                <span class="exp-divider"></span>
+                <span class="exp-title">高级咨询师</span>
+                <span class="exp-divider"></span>
+                <span class="exp-date">2019 – 2026</span>
+            </div>
+
+            <div class="timeline mt-lg">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-header">
+                        <span class="timeline-title">数据分析系统重构</span>
+                        <span class="timeline-company">香港DFI零售集团</span>
+                                            <span class="timeline-role">UI/UX Designer</span>
+                    </div>
+                    <p class="timeline-desc">
+                        身为UI/UX设计师，针对集团原有数据分析系统架构老旧、分析能力不足、视觉风格与品牌形象不匹配等问题，开展内部用户调研。梳理一线分析人员对系统界面的详细需求，保障新系统全面适配各类业务；规划产品架构与交互逻辑，优化操作路径，精简冗余步骤；统一视觉设计风格，输出完整视觉方案，助力方案获得各级管理及使用人员认可；完成全页面界面设计，保障项目按期上线。
+                    </p>
+                    <div class="project-result">
+                        <div class="project-result-label">项目结果</div>
+                        <p class="project-result-text">
+                            产品按照预期周期分时段完美上线，用户使用意愿获得明显提升，经用户反馈新增的对比分析功能可即达提高决策效率，在领导层级进一步推动集团数字化转型任务。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-header">
+                        <span class="timeline-title">品牌窗口与会员系统</span>
+                        <span class="timeline-company">文华东方酒店集团</span>
+                                            <span class="timeline-role">UI/UX Designer</span>
+                    </div>
+                    <p class="timeline-desc">
+                        该系统是集团布局国内市场、打造内地专属品牌窗口的重要载体。项目前期，以问卷调研、实地走访相结合的形式开展需求分析，同时全面研究竞品、提炼行业设计逻辑，为信息架构、交互流程、视觉设计筑牢决策基础。依据用户使用习惯与业务功能规划产品结构与操作路径，绘制超过50+产品原型链路；负责UI界面与宣传物料设计，保障产品前期宣传落地；搭建完整组件库体系，提升复用效率、延长产品生命周期。
+                    </p>
+                    <div class="project-result">
+                        <div class="project-result-label">项目结果</div>
+                        <p class="project-result-text">
+                            产品已正式上线，获得全球集团推广与优秀项目。首批用户转化与入驻已圆满完成，主推酒店商城季节性销售突破原独立系统的销售新高，全新会员系统显著提高用户互动意愿。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-header">
+                        <span class="timeline-title">ERP物流系统</span>
+                        <span class="timeline-company">中国东方雨虹民用建材集团</span>
+                                            <span class="timeline-role">产品经理</span>
+                    </div>
+                    <p class="timeline-desc">
+                        本系统为东方雨虹商城配套ERP物流系统，涵盖下单、出入库、物流追踪等核心功能，是集团针对原有商城功能短板打造的全新项目。以产品经理身份负责平台独立模块设计与开发对接，联动销售、运营团队拆解用户需求、梳理用户全流程，提炼核心业务场景；完成从低保真到高保真原型设计，梳理退换货、物流拦截等复杂流程，输出规范产品文档与功能说明；协同研发推进项目落地，保障产品体验统一、项目按期交付。
+                    </p>
+                    <div class="project-result">
+                        <div class="project-result-label">项目结果</div>
+                        <p class="project-result-text">
+                            切实简化了物流与客户人员对物流追踪拦截工作的工作流程，实现了命令到执行的快速化管理，大幅提升了业务效率，降低了沟通成本与客诉。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-header">
+                        <span class="timeline-title">AI研学平台</span>
+                        <span class="timeline-company">BMW宝马中国集团</span>
+                                            <span class="timeline-role">UI/UX Designer</span>
+                    </div>
+                    <p class="timeline-desc">
+                        本系统为宝马中国针对自身原有数据研学平台的AI化改造方案，旨在通过系统的课程教育、实践方案、学习小组搭建等完成集团内对AI实操的进一步推广。在项目前期，通过一对一访谈的方式，与本产品负责经理进行深度沟通，明确企业对平台期望；创建基础风格情绪版，以其为指导与同事合作进行稿件前期风格探索，绘制多套主风格稿件；根据不同模块主题要求制作UI原型，搭建核心设计框架，进行界面设计；根据创建页面制作对应宣传物料。
+                    </p>
+                    <div class="project-result">
+                        <div class="project-result-label">项目结果</div>
+                        <p class="project-result-text">
+                            完成了本平台的成功上线与转化，收录了30+ AI案例，成功将AI专属课程加入平台并进行推广。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-header">
+                        <span class="timeline-title">「悦秀会」小程序</span>
+                        <span class="timeline-company">越秀地产</span>
+                                            <span class="timeline-role">UI/UX Designer</span>
+                    </div>
+                    <p class="timeline-desc">
+                        越秀地产为广东省龙头企业，覆盖包括食品、商业、地产等多个领域。产品方期望能够通过统一的商城平台串联旗下牛奶、商超、商城停车、社区物业等子品牌功能，扩大品牌影响力，进一步沉淀品牌用户资产。通过深入分析客户提供材料，并与不同子部门进行访谈调研，设计「悦秀会」小程序，通过传统商城+社区服务的方式对需求进行串联，设计专属与越秀的商城结构；同步搭建完整的会员体系，打造一站式线上会员中心，设计并提供多套会员玩法与方案，与第三方公司合作确保方案落地。
+                    </p>
+                    <div class="project-result">
+                        <div class="project-result-label">项目结果</div>
+                        <p class="project-result-text">
+                            本平台成功上线，目前已成熟运营3年，会员人数由子品牌引流获得了从0到万的巨大突破；本平台目前已成为集团主体推广产品，用户粘性稳定，转化功能成熟。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-header">
+                        <span class="timeline-title">BI数据大屏</span>
+                        <span class="timeline-company">荷兰皇家菲仕兰</span>
+                                            <span class="timeline-role">UI/UX Designer</span>
+                    </div>
+                    <p class="timeline-desc">
+                        为解决企业生产计划、采购库存、销售数据不清晰的业务痛点，基于第三方平台提供的BI开发工具及客户指标库相关内容，对主要用户需求进行分析调研，实现业务数据的实时化、可视化管理。通过业务调研抽取相关业务数据，明确数据抽取频率，针对用户自定义需求，设计衍生指标的计算逻辑，经由业务方确认后进行落地；基于第三方平台的基础报表模板，优化页面布局，设计输出报表高保真设计，确保报表易用性。
+                    </p>
+                    <div class="project-result">
+                        <div class="project-result-label">项目结果</div>
+                        <p class="project-result-text">
+                            对比项目上线前后，主要用户查看业务数据从简单的汇报转至数字化，极大的提高了决策效率，查看时间缩短，使用频次提升，覆盖用户增加。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact" style="background: #ffffff;">
+        <div class="container reveal" style="text-align: center;">
+            <div class="contact-image">
+                <img src="联系我.png" alt="欢迎联系">
+            </div>
+            <h2 style="font-family: 'Dancing Script', cursive; font-size: clamp(32px, 5vw, 48px); font-weight: 700; color: var(--ink); margin-top: var(--space-lg); line-height: 1.2;">Get in Touch</h2>
+            <div class="contact-links">
+                <a href="mailto:liujingjie1997@163.com" class="contact-link">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    <span>liujingjie1997@163.com</span>
+                </a>
+                <a href="tel:13012325505" class="contact-link">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    <span>13012325505</span>
+                </a>
+                <a href="#" class="contact-link">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    <span>下载作品集</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p class="footer-text">刘景婕 · UX/UI Designer</p>
+    </footer>
+
+    <script>
+        // Reveal animation on scroll
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // Active nav link
+        const sections = document.querySelectorAll('section[id], header[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (scrollY >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
